@@ -12,7 +12,7 @@ function Data() {
 
   const [data, setData] = useState([
     { id: 1, name: 'James Young', order: '123', orderDate: '24/Mar/2024', deliveryDate: '24/Apr/2024', status: 'Due', account: '$459', discount: '543' },
-    { id: 2, name: 'Yash', order: '456', orderDate: '21/Mar/2024', deliveryDate: '2024-05-02', status: 'Pending', account: 'XYZ Inc', discount: '534' },
+    { id: 2, name: 'Yash', order: '456', orderDate: '21/Mar/2024', deliveryDate: '2024-05-02', status: 'Pending', account: '$500', discount: '534' },
     { id: 3, name: 'Aman', order: '125', orderDate: '26/Mar/2024', deliveryDate: '26/Apr/2024', status: 'Delivered', account: '$590', discount: '430' },
     { id: 4, name: 'Rhoit', order: '126', orderDate: '27/Mar/2024', deliveryDate: '27/Apr/2024', status: 'Due', account: '$345', discount: '256' },
     { id: 5, name: 'Varun', order: '127', orderDate: '28/Mar/2024', deliveryDate: '28/Apr/2024', status: 'Pending', account: '$670', discount: '100' },
@@ -21,9 +21,7 @@ function Data() {
     { id: 8, name: 'Utkarsh', order: '130', orderDate: '31/Mar/2024', deliveryDate: '31/Apr/2024', status: 'Pending', account: '$490', discount: '560' },
     { id: 9, name: 'Prabhat', order: '131', orderDate: '01/Apr/2024', deliveryDate: '01/May/2024', status: 'Delivered', account: '$600', discount: '600' },
     { id: 10, name: 'Ava Taylor', order: '132', orderDate: '02/Apr/2024', deliveryDate: '02/May/2024', status: 'Due', account: '$700', discount: '700' },
-    { id: 11, name: 'Prabhas', order: '133', orderDate: '03/Apr/2024', deliveryDate: '03/May/2024', status: 'Pending', account: '$800', discount: '800' },
-    { id: 12, name: 'Ashral', order: '134', orderDate: '04/Apr/2024', deliveryDate: '04/May/2024', status: 'Delivered', account: '$900', discount: '900' },
-  ]);
+    ]);
 
 
 
@@ -109,7 +107,7 @@ const deliveredCount = data.reduce((count, row) => {
           <Navbar  data={data} setOpen={setOpen}/>
           
           <div style={{ paddingLeft:"3%",  display: 'flex', justifyContent: "space-between", height: '3%'}}>
-            <button style={{ float:"left",  cursor: "pointer", borderRadius: '6px', background: 'lightgrey', border: 'none' }}>All Orders   <span style={{ fontWeight:"800"}}>  {data.length+1}</span></button>
+            <button style={{ float:"left",  cursor: "pointer", borderRadius: '6px', background: 'lightgrey', border: 'none' }}>All Orders   <span style={{ fontWeight:"800"}}>  {data.length}</span></button>
             <button style={{ border: 'none',  cursor: "pointer", borderRadius: '6px', background: 'orange' }}>Pending Orders  <span style={{ fontWeight:"800"}}>  {pendingCount}</span> </button>
             <button style={{ border: 'none',  cursor: "pointer", borderRadius: '6px', background: 'lightgreen' }}>Delivered Orders  <span style={{ fontWeight:"800"}}>  {deliveredCount}</span> </button>
             <button style={{ border: 'none',  cursor: "pointer", borderRadius: '6px', background: 'pink' }}>Due Orders  <span style={{fontWeight:"800"}}>  {dueCount}</span> </button>
